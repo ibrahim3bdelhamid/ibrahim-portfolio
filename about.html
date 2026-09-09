@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ibrahim Abdelhamid</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Ibrahim Portfolio</a>
+            <nav>
+                <ul style="display: flex; align-items: center; gap: 20px;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>                    
+                    <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+                        <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    </button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="container" style="padding-top: 80px;">
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="row">
+            <!-- Sidebar Info (col-4) -->
+            <div class="card col-4">
+                <h3 style="margin-bottom: 15px;">Personal Info</h3>
+                <p style="margin-bottom: 8px;"><strong>Name:</strong> Ibrahim Abdelhamid</p>
+                <p style="margin-bottom: 8px;"><strong>Role:</strong> Full-Stack Developer</p>
+                <p style="margin-bottom: 8px;"><strong>Institution:</strong> Thebes Higher Institute</p>
+                <p><strong>Department:</strong> Computer Science</p>
+            </div>
+
+            <!-- Main Bio & Education (col-8) -->
+            <div class="card col-8">
+                <h3 style="margin-bottom: 12px;">My Background & Education</h3>
+                <p style="margin-bottom: 16px;">
+                    I am a Computer Science student at Thebes Higher Institute in Cairo, deeply passionate about software development and building scalable web systems. My focus bridges both Frontend design and Backend data architecture.
+                </p>
+                
+                <h3 style="margin-bottom: 12px; margin-top: 24px;">Training & Certifications</h3>
+                <ul style="list-style-type: disc; padding-left: 20px; color: #9ca3af; font-size: 14px; display: flex; flex-direction: column; gap: 8px;">
+                    <li><strong>National Telecommunication Institute (NTI):</strong> Completed MEAN-Stack Web Development summer training program (120 hours).</li>
+                    <li><strong>Digital Egypt Pioneers Initiative (DEPI):</strong> Enrolled in the React Frontend Web Developer track.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ibrahim Abdelhamid. All rights reserved.</p>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
