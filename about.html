@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ibrahim Abdelhamid</title>
+    <meta name="description" content="Learn more about Ibrahim Abdelhamid's background, education, and technical training in full-stack web development.">
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Ibrahim Portfolio</a>
+            <nav>
+                <ul style="display: flex; align-items: center; gap: 20px;">
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
+                    <li><a href="education.html" data-i18n="nav.education">Education</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    <li>
+                        <button id="lang-toggle" class="lang-toggle-btn" title="Switch Language / تبديل اللغة" aria-label="Switch Language">
+                            <i class="fa-solid fa-globe"></i>
+                            <span id="lang-label">عربي</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+                            <i id="theme-icon" class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="container" style="padding-top: 80px;">
+        <h2 class="section-title" data-i18n="about.title">About Me</h2>
+        
+        <div class="row">
+            <!-- Sidebar Info (col-4) -->
+            <div class="card col-4">
+                <h3 style="margin-bottom: 15px;" data-i18n="about.personalInfoTitle">Personal Info</h3>
+                <p style="margin-bottom: 8px;"><strong data-i18n="about.nameLabel">Name:</strong> <span data-i18n="about.nameValue">Ibrahim Abdelhamid</span></p>
+                <p style="margin-bottom: 8px;"><strong data-i18n="about.roleLabel">Role:</strong> <span data-i18n="about.roleValue">Full-Stack Developer</span></p>
+                <p style="margin-bottom: 8px;"><strong data-i18n="about.institutionLabel">Institution:</strong> <span data-i18n="about.institutionValue">Thebes Higher Institute</span></p>
+                <p><strong data-i18n="about.departmentLabel">Department:</strong> <span data-i18n="about.departmentValue">Computer Science</span></p>
+            </div>
+
+            <!-- Main Bio & Education (col-8) -->
+            <div class="card col-8">
+                <h3 style="margin-bottom: 12px;" data-i18n="about.backgroundTitle">My Background & Education</h3>
+                <p style="margin-bottom: 16px;" data-i18n="about.backgroundText">
+                    I am a Computer Science student at Thebes Higher Institute in Cairo, deeply passionate about software development and building scalable web systems. My focus bridges both Frontend design and Backend data architecture.
+                </p>
+                
+                <h3 style="margin-bottom: 12px; margin-top: 24px;" data-i18n="about.certsTitle">Training & Certifications</h3>
+                <ul style="list-style-type: disc; padding-inline-start: 20px; color: #9ca3af; font-size: 14px; display: flex; flex-direction: column; gap: 8px;">
+                    <li><strong data-i18n="about.certsItem1Strong">National Telecommunication Institute (NTI):</strong> <span data-i18n="about.certsItem1Text">Completed MEAN-Stack Web Development summer training program (120 hours).</span></li>
+                    <li><strong data-i18n="about.certsItem2Strong">Digital Egypt Pioneers Initiative (DEPI):</strong> <span data-i18n="about.certsItem2Text">Enrolled in the React Frontend Web Developer track.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-socials">
+            <a href="https://github.com/ibrahim3bdelhamid" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ibrahim3bdelhamid" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:ibrahimsaif465@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p data-i18n="footer.rights">&copy; 2026 Ibrahim Abdelhamid. All rights reserved.</p>
+    </footer>
+
+    <!-- Shared Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/lang.js"></script>
+</body>
+</html>
